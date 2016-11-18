@@ -1,5 +1,5 @@
-var BatX = 50;
-var BatY = 50;
+var BatX = 525;
+var BatY = 300;
 document.addEventListener("keydown", function(e) {
  if(e.keyCode == 37){
    BatX -=15;
