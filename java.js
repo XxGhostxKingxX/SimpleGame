@@ -48,3 +48,7 @@ document.getElementById("batFly").setAttribute("y", BatY)
  }
 
 })
+
+if(BatX > foodX && BatX < foodX + width && BatY > foodY && BatY < foodY + height) {
+  //code to "eat" food Part 5
+}
