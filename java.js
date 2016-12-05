@@ -1,8 +1,8 @@
 var canvas1 = document.getElementById("overlap-canvas-one")
 var BatX = 525;
 var BatY = 300;
-var food1 =
-var food2 =
+var food1 = 1;
+var food2  = 1;
 var foodEaten = 0;
 
 document.addEventListener("keydown", function(e) {
@@ -11,11 +11,10 @@ document.addEventListener("keydown", function(e) {
 document.getElementById("bat").setAttribute("x", BatX)
 
  }
- else (e.keyCode == 39){
+ else if (e.keyCode == 39) {
        BatX +=15;
 document.getElementById("bat").setAttribute("x", BatX)
  }
-}
  var Bat1 = document.getElementById("Bat1")
  var food1 = document.getElementById("food1")
 
@@ -25,7 +24,8 @@ document.getElementById("bat").setAttribute("x", BatX)
  foodX = Number(food1.getAttribute("x"))
  foodY = Number(food1.getAttribute("y"))
 
-}
+})
+
 if(BatX > foodX && BatX < foodX + width && BatY > foodY && BatY < foodY + height) {
   foodEaten = foodEaten + 1;
   document.getElementById("score").textContent = foodEaten;
@@ -45,4 +45,13 @@ else {
   foodEaten.setAttribute("opacity", 1)
 }
 
-})
+
+
+if(foodEaten == 5) {
+
+   document.getElementById("screen").pauseAnimation;
+   var timeStop = Date.now()
+   var timeDuration = timeStop - timeStart
+   timeDuration = timeDuration/1000
+   document.getElementById("total time").textContent
+}
